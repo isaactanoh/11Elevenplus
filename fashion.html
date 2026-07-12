@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11Eleven Plus Signature | Premium Luxury Fashion</title>
+    <meta name="description" content="Immerse yourself in 11Eleven Plus Signature. Discover tailored premium menswear, elegant womenswear collections, and luxury bespoke accessories.">
+    <!-- Google Fonts & FontAwesome Core Dependencies -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/images/logo.jpg" type="image/x-icon">
+    <style>
+        /* Inline image styles – same as previous pages for consistency */
+        .card-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            margin-top: -10px;
+        }
+        .card-image img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s var(--transition-premium);
+        }
+        .glass-card:hover .card-image img {
+            transform: scale(1.05);
+        }
+        .card-image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(7,7,8,0.15) 0%, rgba(7,7,8,0.65) 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+        .hero-bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 0;
+            opacity: 0.35;
+            filter: brightness(0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress"></div>
+
+    <!-- Custom Luxury Cursor Tracking Nodes -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <!-- Active Loader Engine -->
+    <div class="preloader">
+        <div class="preloader-wrap">
+            <h1 class="preloader-logo">11Eleven<span>Plus</span></h1>
+            <div class="preloader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Sticky Navigation Layout Bar -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                11Eleven<span class="gold-text">Plus</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="appliances.html" class="nav-link">Appliances</a></li>
+                    <li><a href="auto.html" class="nav-link">Auto Deals</a></li>
+                    <li><a href="fashion.html" class="nav-link active">Signature Fashion</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="menu-socials">
+                    <a href="https://www.facebook.com/share/1C3CKjjL6a/?mibextid=wwXIfr" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/11eleven_plus" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@11eleven_plus" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.linkedin.com/in/eleven-plus-334429421" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/+233274923917" target="_blank" class="frame-link"><i class="fa-brands fa-whatsapp"></i> </a>
+                </div>
+            </nav>
+
+            <div class="header-actions">
+                <a href="contact.html" class="btn-nav">Get In Touch</a>
+                <button class="hamburger" type="button" aria-label="Toggle Menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Inner Fashion Narrative Banner with background image -->
+    <section class="hero-section" style="height: 55vh; position: relative;">
+        <div class="hero-bg-image" style="background-image: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1600&q=80');" aria-hidden="true"></div>
+        <div class="hero-bg-overlay" style="background: radial-gradient(circle at center, transparent 15%, var(--bg-dark) 85%); z-index: 1;"></div>
+        <div class="animated-gradient-sphere" style="background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 70%); z-index: 1;"></div>
+        <div class="hero-content" style="z-index: 2;">
+            <span class="subtitle">11Eleven Plus Signature</span>
+            <h1 class="gradient-text">Haute Couture & Fine Tailoring</h1>
+            <p>An exquisite statement of personal style. Discover hand-selected textiles, high-end garments, and meticulous wardrobe curations for the modern tastemaker.</p>
+        </div>
+    </section>
+
+    <!-- Collections Presentation Block -->
+    <section class="fashion-collections section-padding" style="padding-top: 60px;">
+        <div class="container">
+            
+            <div class="section-header text-center">
+                <span class="subtitle">The Lookbook Matrix</span>
+                <h2 class="section-title">Curated Wardrobe Lineup</h2>
+                <div class="gold-divider"></div>
+            </div>
+
+            <div class="divisions-grid">
+                <!-- Collection 1: Elite Menswear -->
+                <div class="division-card glass-card reveal-on-scroll">
+                    <div class="card-glow-element"></div>
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" 
+                             alt="Elegant tailored menswear suit and accessories on display" 
+                             loading="lazy">
+                        <div class="card-image-overlay"></div>
+                    </div>
+                    <div class="card-icon"><i class="fa-solid fa-user-tie"></i></div>
+                    <h3>Premium Menswear</h3>
+                    <p>Sartorial architecture for the contemporary gentleman. Executive tailored suits, fine linen essentials, and elevated casual statement apparel.</p>
+                    <ul class="card-features">
+                        <li><i class="fa-solid fa-scissors"></i> Bespoke Structural Tailoring</li>
+                        <li><i class="fa-solid fa-scroll"></i> Import Grade Superfine Textiles</li>
+                    </ul>
+                    <a href="contact.html" class="card-btn">Explore Lookbook <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Collection 2: Elite Womenswear -->
+                <div class="division-card glass-card reveal-on-scroll">
+                    <div class="card-glow-element"></div>
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=800&q=80" 
+                             alt="Flowing designer dress on a mannequin in a luxury boutique" 
+                             loading="lazy">
+                        <div class="card-image-overlay"></div>
+                    </div>
+                    <div class="card-icon"><i class="fa-solid fa-shirt"></i></div>
+                    <h3>Premium Womenswear</h3>
+                    <p>Timeless luxury meets bold, modern silhouettes. Fluid statement dresses, precision power blazers, and high-end evening coordinates.</p>
+                    <ul class="card-features">
+                        <li><i class="fa-solid fa-star"></i> Red-Carpet High-Fashion Profiles</li>
+                        <li><i class="fa-solid fa-gem"></i> Hand-Finished Embroidered Details</li>
+                    </ul>
+                    <a href="contact.html" class="card-btn">Explore Lookbook <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Collection 3: Luxury Accessories -->
+                <div class="division-card glass-card reveal-on-scroll">
+                    <div class="card-glow-element"></div>
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=800&q=80" 
+                             alt="Designer handbag and luxury watch styled on a marble surface" 
+                             loading="lazy">
+                        <div class="card-image-overlay"></div>
+                    </div>
+                    <div class="card-icon"><i class="fa-solid fa-glasses"></i></div>
+                    <h3>Luxury Accessories</h3>
+                    <p>The definitive final touch to your aesthetic presence. Premium leather travel bags, precision statement jewelry, and artisanal footwear.</p>
+                    <ul class="card-features">
+                        <li><i class="fa-solid fa-briefcase"></i> Genuine Top-Grain Leather Goods</li>
+                        <li><i class="fa-solid fa-clock"></i> Avant-Garde Accents & Jewelry</li>
+                    </ul>
+                    <a href="contact.html" class="card-btn">Explore Collection <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interactive Styling Concierge Invitation Banner -->
+    <section class="cta-section section-padding">
+        <div class="cta-glow-bg"></div>
+        <div class="container text-center reveal-on-scroll">
+            <h2>Desire a Personalized Wardrobe Consult?</h2>
+            <p>Our bespoke fashion division schedules private fitting sessions and custom design commissions tailored strictly to your individual specifications.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-gold-filled">Schedule Private Fitting</a>
+                <a href="contact.html" class="btn btn-secondary">Inquire Seasonal Drops</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Master Footer Block -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand-column">
+                <a href="index.html" class="footer-logo">11Eleven<span>Plus</span></a>
+                <p>The ultimate definitive benchmark of modern premium experiences across appliances, vehicle logistics, and high fashion.</p>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/share/1C3CKjjL6a/?mibextid=wwXIfr" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/11eleven_plus" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@11eleven_plus" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.linkedin.com/in/eleven-plus-334429421" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/+233274923917" target="_blank" class="frame-link"><i class="fa-brands fa-whatsapp"></i> </a>
+                    <a href="mailto:11Elevenplusgroups@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links-column">
+                <h4>Core Dimensions</h4>
+                <ul>
+                    <li><a href="appliances.html">Smart Electronics</a></li>
+                    <li><a href="auto.html">Luxury Vehicles</a></li>
+                    <li><a href="fashion.html">Signature Fashion</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-column">
+                <h4>Corporate</h4>
+                <ul>
+                    <li><a href="about.html">Our Legacy</a></li>
+                    <li><a href="contact.html">Contact Hub</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-subscribe-column">
+                <h4>The Insider Brief</h4>
+                <p>Subscribe to receive high-tier collection updates and exclusive asset notifications.</p>
+                <form class="subscribe-form" action="https://formsubmit.co/11elevenplusgroups@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="11ElevenPlus">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/thank-you.html">
+                    <input type="email" name="email" placeholder="Enter luxurious email address" required autocomplete="off">
+                    <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 11Eleven Plus. All Rights Fully Reserved. Engineered beautifully with premium aesthetics.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
