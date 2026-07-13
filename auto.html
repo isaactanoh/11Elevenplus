@@ -8,7 +8,7 @@
     <!-- Google Fonts & FontAwesome Core Dependencies -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 
@@ -39,7 +39,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(180deg, rgba(7,7,8,0.15) 0%, rgba(7,7,8,0.65) 100%);
+            background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 100%);
             z-index: 1;
             pointer-events: none;
         }
@@ -53,16 +53,15 @@
             background-position: center;
             background-repeat: no-repeat;
             z-index: 0;
-            opacity: 0.35;
-            filter: brightness(0.8);
+            opacity: 0.06;
         }
         .why-image-wrapper {
             position: relative;
             margin: 35px 0;
             border-radius: 8px;
             overflow: hidden;
-            border: 1px solid var(--glass-border);
-            background: rgba(15,16,19,0.5);
+            border: 1px solid var(--border-light);
+            background: var(--white);
         }
         .why-image {
             width: 100%;
@@ -79,8 +78,46 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(180deg, rgba(7,7,8,0.3) 0%, rgba(7,7,8,0) 60%);
+            background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 60%);
             pointer-events: none;
+        }
+        /* Enhanced typography for auto page */
+        .category-hero .hero-content h1 {
+            font-weight: var(--weight-semibold);
+        }
+        .category-hero .hero-content p {
+            font-weight: var(--weight-regular);
+            font-size: var(--text-md);
+        }
+        .auto-portfolio .division-card h3 {
+            font-weight: var(--weight-semibold);
+        }
+        .auto-portfolio .division-card p {
+            font-weight: var(--weight-regular);
+        }
+        .why-choose-us .section-title {
+            font-weight: var(--weight-semibold);
+        }
+        .why-choose-us .section-desc {
+            font-weight: var(--weight-regular);
+        }
+        .why-point-card h4 {
+            font-weight: var(--weight-semibold);
+        }
+        .why-point-card p {
+            font-weight: var(--weight-regular);
+        }
+        .counter-number {
+            font-weight: var(--weight-bold);
+        }
+        .counter-label {
+            font-weight: var(--weight-medium);
+        }
+        .cta-section h2 {
+            font-weight: var(--weight-regular);
+        }
+        .cta-section p {
+            font-weight: var(--weight-regular);
         }
     </style>
 </head>
@@ -120,7 +157,7 @@
                 <div class="menu-socials">
                     <a href="https://www.facebook.com/share/1C3CKjjL6a/?mibextid=wwXIfr" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/11eleven_plus" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@11eleven_plus" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.tiktok.com/@11elevenplus" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                     <a href="https://www.linkedin.com/in/eleven-plus-334429421" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://wa.me/+233274923917" target="_blank" class="frame-link"><i class="fa-brands fa-whatsapp"></i> </a>
                 </div>
@@ -138,10 +175,10 @@
     </header>
 
     <!-- Inner Showroom Banner Section with background image -->
-    <section class="hero-section" style="height: 55vh; position: relative;">
-        <div class="hero-bg-image" style="background-image: url('https://images.unsplash.com/photo-1503376780358-5465040e2f2d?auto=format&fit=crop&w=1600&q=80');" aria-hidden="true"></div>
-        <div class="hero-bg-overlay" style="background: radial-gradient(circle at center, transparent 15%, var(--bg-dark) 85%); z-index: 1;"></div>
-        <div class="animated-gradient-sphere" style="background: radial-gradient(circle, rgba(212,175,55,0.05) 0%, transparent 65%); z-index: 1;"></div>
+    <section class="hero-section category-hero" style="height: 55vh; position: relative; background: var(--gradient-hero);">
+        <div class="hero-bg-image" style="background-image: url('https://images.unsplash.com/photo-1503376780358-5465040e2f2d?auto=format&fit=crop&w=1600&q=80');"></div>
+        <div class="hero-bg-overlay" style="background: radial-gradient(circle at center, transparent 15%, rgba(255,255,255,0.3) 85%); z-index: 1;"></div>
+        <div class="animated-gradient-sphere" style="background: radial-gradient(circle, rgba(200,162,74,0.04) 0%, transparent 65%); z-index: 1;"></div>
         <div class="hero-content" style="z-index: 2;">
             <span class="subtitle">11Eleven Plus Auto Deals</span>
             <h1 class="gradient-text">Bespoke Automotive Sourcing</h1>
@@ -150,7 +187,7 @@
     </section>
 
     <!-- Strategic Automotive Sourcing Offerings Grid -->
-    <section class="auto-portfolio section-padding" style="padding-top: 60px;">
+    <section class="auto-portfolio section-padding" style="padding-top: 60px; background: var(--gradient-section);">
         <div class="container">
             
             <div class="section-header text-center">
@@ -161,7 +198,7 @@
 
             <div class="divisions-grid">
                 <!-- Service 1: Showroom Sourcing -->
-                <div class="division-card glass-card reveal-on-scroll">
+                <div class="division-card glass-card reveal-on-scroll" style="background: var(--white); border: 1px solid var(--border-light);">
                     <div class="card-glow-element"></div>
                     <div class="card-image">
                         <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80" 
@@ -180,7 +217,7 @@
                 </div>
 
                 <!-- Service 2: Managed Port Importation -->
-                <div class="division-card glass-card reveal-on-scroll">
+                <div class="division-card glass-card reveal-on-scroll" style="background: var(--white); border: 1px solid var(--border-light);">
                     <div class="card-glow-element"></div>
                     <div class="card-image">
                         <img src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&w=800&q=80" 
@@ -199,7 +236,7 @@
                 </div>
 
                 <!-- Service 3: Sourcing on Request -->
-                <div class="division-card glass-card reveal-on-scroll">
+                <div class="division-card glass-card reveal-on-scroll" style="background: var(--white); border: 1px solid var(--border-light);">
                     <div class="card-glow-element"></div>
                     <div class="card-image">
                         <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=800&q=80" 
@@ -222,7 +259,7 @@
     </section>
 
     <!-- Why Import With Us Analytics Block -->
-    <section class="why-choose-us section-padding dynamic-bg" style="border-top: 1px solid var(--glass-border);">
+    <section class="why-choose-us section-padding dynamic-bg" style="border-top: 1px solid var(--border-light); background: var(--gradient-white-gold);">
         <div class="container">
             <div class="why-grid">
                 <div class="why-content-side reveal-on-scroll">
@@ -252,14 +289,14 @@
                 </div>
 
                 <div class="why-points-side">
-                    <div class="why-point-card glass-card reveal-on-scroll">
+                    <div class="why-point-card glass-card reveal-on-scroll" style="background: var(--white); border: 1px solid var(--border-light);">
                         <i class="fa-solid fa-file-invoice-dollar gold-text"></i>
                         <div>
                             <h4>Transparent Financial Accounting</h4>
                             <p>Receive verified invoices for real container configurations, clear shipping costs, and official import duties without hidden surcharges.</p>
                         </div>
                     </div>
-                    <div class="why-point-card glass-card reveal-on-scroll">
+                    <div class="why-point-card glass-card reveal-on-scroll" style="background: var(--white); border: 1px solid var(--border-light);">
                         <i class="fa-solid fa-wrench gold-text"></i>
                         <div>
                             <h4>Rigid Pre-Purchase Mechanics Evaluation</h4>
@@ -293,7 +330,7 @@
                 <div class="footer-socials">
                     <a href="https://www.facebook.com/share/1C3CKjjL6a/?mibextid=wwXIfr" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/11eleven_plus" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@11eleven_plus" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.tiktok.com/@11elevenplus" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                     <a href="https://www.linkedin.com/in/eleven-plus-334429421" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://wa.me/+233274923917" target="_blank" class="frame-link"><i class="fa-brands fa-whatsapp"></i> </a>
                     <a href="mailto:11Elevenplusgroups@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>

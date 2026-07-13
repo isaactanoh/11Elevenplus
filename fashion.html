@@ -8,7 +8,7 @@
     <!-- Google Fonts & FontAwesome Core Dependencies -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 
@@ -39,7 +39,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(180deg, rgba(7,7,8,0.15) 0%, rgba(7,7,8,0.65) 100%);
+            background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 100%);
             z-index: 1;
             pointer-events: none;
         }
@@ -53,8 +53,33 @@
             background-position: center;
             background-repeat: no-repeat;
             z-index: 0;
-            opacity: 0.35;
-            filter: brightness(0.8);
+            opacity: 0.06;
+        }
+        /* Enhanced typography for fashion page */
+        .category-hero .hero-content h1 {
+            font-weight: var(--weight-semibold);
+        }
+        .category-hero .hero-content p {
+            font-weight: var(--weight-regular);
+            font-size: var(--text-md);
+        }
+        .fashion-collections .division-card h3 {
+            font-weight: var(--weight-semibold);
+        }
+        .fashion-collections .division-card p {
+            font-weight: var(--weight-regular);
+        }
+        .card-features li {
+            font-weight: var(--weight-medium);
+        }
+        .card-btn {
+            font-weight: var(--weight-semibold);
+        }
+        .cta-section h2 {
+            font-weight: var(--weight-regular);
+        }
+        .cta-section p {
+            font-weight: var(--weight-regular);
         }
     </style>
 </head>
@@ -94,7 +119,7 @@
                 <div class="menu-socials">
                     <a href="https://www.facebook.com/share/1C3CKjjL6a/?mibextid=wwXIfr" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/11eleven_plus" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@11eleven_plus" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.tiktok.com/@11elevenplus" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                     <a href="https://www.linkedin.com/in/eleven-plus-334429421" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://wa.me/+233274923917" target="_blank" class="frame-link"><i class="fa-brands fa-whatsapp"></i> </a>
                 </div>
@@ -112,9 +137,9 @@
     </header>
 
     <!-- Inner Fashion Narrative Banner with background image -->
-    <section class="hero-section" style="height: 55vh; position: relative;">
-        <div class="hero-bg-image" style="background-image: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1600&q=80');" aria-hidden="true"></div>
-        <div class="hero-bg-overlay" style="background: radial-gradient(circle at center, transparent 15%, var(--bg-dark) 85%); z-index: 1;"></div>
+    <section class="hero-section category-hero" style="height: 55vh; position: relative; background: var(--gradient-hero);">
+        <div class="hero-bg-image" style="background-image: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1600&q=80');"></div>
+        <div class="hero-bg-overlay" style="background: radial-gradient(circle at center, transparent 15%, rgba(255,255,255,0.3) 85%); z-index: 1;"></div>
         <div class="animated-gradient-sphere" style="background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 70%); z-index: 1;"></div>
         <div class="hero-content" style="z-index: 2;">
             <span class="subtitle">11Eleven Plus Signature</span>
@@ -124,7 +149,7 @@
     </section>
 
     <!-- Collections Presentation Block -->
-    <section class="fashion-collections section-padding" style="padding-top: 60px;">
+    <section class="fashion-collections section-padding" style="padding-top: 60px; background: var(--gradient-section);">
         <div class="container">
             
             <div class="section-header text-center">
@@ -135,7 +160,7 @@
 
             <div class="divisions-grid">
                 <!-- Collection 1: Elite Menswear -->
-                <div class="division-card glass-card reveal-on-scroll">
+                <div class="division-card glass-card reveal-on-scroll" style="background: var(--white); border: 1px solid var(--border-light);">
                     <div class="card-glow-element"></div>
                     <div class="card-image">
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" 
@@ -154,7 +179,7 @@
                 </div>
 
                 <!-- Collection 2: Elite Womenswear -->
-                <div class="division-card glass-card reveal-on-scroll">
+                <div class="division-card glass-card reveal-on-scroll" style="background: var(--white); border: 1px solid var(--border-light);">
                     <div class="card-glow-element"></div>
                     <div class="card-image">
                         <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=800&q=80" 
@@ -173,7 +198,7 @@
                 </div>
 
                 <!-- Collection 3: Luxury Accessories -->
-                <div class="division-card glass-card reveal-on-scroll">
+                <div class="division-card glass-card reveal-on-scroll" style="background: var(--white); border: 1px solid var(--border-light);">
                     <div class="card-glow-element"></div>
                     <div class="card-image">
                         <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=800&q=80" 
@@ -217,7 +242,7 @@
                 <div class="footer-socials">
                     <a href="https://www.facebook.com/share/1C3CKjjL6a/?mibextid=wwXIfr" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/11eleven_plus" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@11eleven_plus" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.tiktok.com/@11elevenplus" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                     <a href="https://www.linkedin.com/in/eleven-plus-334429421" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://wa.me/+233274923917" target="_blank" class="frame-link"><i class="fa-brands fa-whatsapp"></i> </a>
                     <a href="mailto:11Elevenplusgroups@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>

@@ -8,13 +8,13 @@
     <!-- Google Fonts & FontAwesome Core Dependencies -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 
     <!-- Favicon -->
     <link rel="icon" href="/images/logo.jpg" type="image/x-icon">
-    
+
     <!-- Inline styles for new image classes (if not present in style.css) -->
     <style>
         /* Hero background image layer */
@@ -68,6 +68,38 @@
             background: rgba(7,7,8,0.4);
             z-index: 1;
         }
+        /* Enhanced typography for about page */
+        .philosophy-section .section-title {
+            font-weight: var(--weight-semibold);
+        }
+        .philosophy-section .section-desc {
+            font-weight: var(--weight-regular);
+            font-size: var(--text-md);
+            line-height: 1.9;
+        }
+        .why-point-card h4 {
+            font-weight: var(--weight-semibold);
+        }
+        .why-point-card p {
+            font-weight: var(--weight-regular);
+        }
+        .timeline-section .why-point-card h4 {
+            font-weight: var(--weight-semibold);
+        }
+        .timeline-section .why-point-card p {
+            font-weight: var(--weight-regular);
+        }
+        .hero-content .subtitle {
+            font-weight: var(--weight-semibold);
+            letter-spacing: 6px;
+        }
+        .hero-content h1 {
+            font-weight: var(--weight-semibold);
+        }
+        .hero-content p {
+            font-weight: var(--weight-regular);
+            font-size: var(--text-md);
+        }
     </style>
 </head>
 <body>
@@ -93,7 +125,7 @@
             <a href="index.html" class="logo">
                 11Eleven<span class="gold-text">Plus</span>
             </a>
-            
+
             <nav class="nav-menu">
                 <ul class="nav-list">
                     <li><a href="index.html" class="nav-link">Home</a></li>
@@ -106,7 +138,7 @@
                 <div class="menu-socials">
                     <a href="https://www.facebook.com/share/1C3CKjjL6a/?mibextid=wwXIfr" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/11eleven_plus" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@11eleven_plus" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.tiktok.com/@11elevenplus" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                     <a href="https://www.linkedin.com/in/eleven-plus-334429421" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://wa.me/+233274923917" target="_blank" class="frame-link"><i class="fa-brands fa-whatsapp"></i> </a>
                 </div>
@@ -124,10 +156,10 @@
     </header>
 
     <!-- Inner Narrative Structural Header Banner with background image -->
-    <section class="hero-section" style="height: 60vh; position: relative;">
+    <section class="hero-section" style="height: 60vh; position: relative; background: var(--gradient-hero);">
         <!-- Background image added for legacy ambiance -->
-        <div class="hero-bg-image" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80');" aria-hidden="true"></div>
-        <div class="hero-bg-overlay" style="background: radial-gradient(circle at center, transparent 10%, var(--bg-dark) 90%); z-index: 1;"></div>
+        <div class="hero-bg-image" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80'); opacity: 0.08;" aria-hidden="true"></div>
+        <div class="hero-bg-overlay" style="background: radial-gradient(circle at center, transparent 10%, rgba(255,255,255,0.3) 90%); z-index: 1;"></div>
         <div class="hero-content" style="z-index: 2;">
             <span class="subtitle">The Master Brand Architecture</span>
             <h1 class="gradient-text">Our Legacy & Philosophy</h1>
@@ -136,17 +168,17 @@
     </section>
 
     <!-- Mission, Vision & Core Values Section Matrix with added image -->
-    <section class="philosophy-section section-padding">
+    <section class="philosophy-section section-padding" style="background: var(--gradient-section);">
         <div class="container">
             <div class="why-grid">
                 <div class="reveal-on-scroll">
                     <span class="subtitle">Founding Intentions</span>
                     <h2 class="section-title">The Blueprint of Absolute Precision</h2>
                     <p class="section-desc" style="margin-top:20px;">11Eleven Plus bridges the boundary separating global luxury distribution networks from discerning consumers. We orchestrate retail value ecosystems that don't just supply modern elite assets—we standardize lifestyle benchmarks across consumer technologies, specialized vehicle logistics, and couture styling houses.</p>
-                    
+
                     <!-- Contextual image representing precision and luxury craftsmanship -->
                     <div class="why-image-wrapper">
-                        <img src="/images/logo.jpg" 
+                        <img src="/images/logo.jpg"
                              alt="Premium executive pen on marble desk symbolizing the precision and elegance of 11Eleven Plus operations"
                              loading="lazy"
                              class="why-image">
@@ -154,14 +186,14 @@
                     </div>
                 </div>
                 <div class="why-points-side">
-                    <div class="why-point-card glass-card reveal-on-scroll">
+                    <div class="why-point-card glass-card reveal-on-scroll" style="background: var(--white); border: 1px solid var(--border-light);">
                         <i class="fa-solid fa-eye gold-text"></i>
                         <div>
                             <h4>The Vision</h4>
                             <p>To perpetually remain the most trusted elite multi-divisional retail group, renowned globally for absolute logistical efficiency and premium product sourcing authenticity.</p>
                         </div>
                     </div>
-                    <div class="why-point-card glass-card reveal-on-scroll">
+                    <div class="why-point-card glass-card reveal-on-scroll" style="background: var(--white); border: 1px solid var(--border-light);">
                         <i class="fa-solid fa-bullseye gold-text"></i>
                         <div>
                             <h4>The Mission</h4>
@@ -174,7 +206,7 @@
     </section>
 
     <!-- Interactive Chronological Milestone Framework -->
-    <section class="timeline-section section-padding dynamic-bg" style="border-top: 1px solid var(--glass-border);">
+    <section class="timeline-section section-padding dynamic-bg" style="border-top: 1px solid var(--border-light); background: var(--gradient-white-gold);">
         <div class="container">
             <div class="section-header text-center">
                 <span class="subtitle">Corporate History Metrics</span>
@@ -184,27 +216,27 @@
 
             <div class="why-points-side" style="max-width: 900px; margin: 0 auto; gap: 40px; position: relative;">
                 <!-- Milestone Card 1 -->
-                <div class="why-point-card glass-card reveal-on-scroll" style="display: flex; gap: 40px; align-items: center;">
+                <div class="why-point-card glass-card reveal-on-scroll" style="display: flex; gap: 40px; align-items: center; background: var(--white); border: 1px solid var(--border-light);">
                     <div class="counter-number gold-text" style="font-size: 2.5rem; font-weight:700; line-height:1; min-width:120px;">2024</div>
-                    <div style="border-left: 1px solid var(--glass-border); padding-left: 40px;">
+                    <div style="border-left: 1px solid var(--border-light); padding-left: 40px;">
                         <h4 style="margin-bottom: 5px;">Genesis Conception</h4>
                         <p>11Eleven Plus establishes its fundamental flagship consumer electronics sourcing platform, defining a premium paradigm shift for local delivery logistics and smart infrastructure integration.</p>
                     </div>
                 </div>
 
                 <!-- Milestone Card 2 -->
-                <div class="why-point-card glass-card reveal-on-scroll" style="display: flex; gap: 40px; align-items: center;">
+                <div class="why-point-card glass-card reveal-on-scroll" style="display: flex; gap: 40px; align-items: center; background: var(--white); border: 1px solid var(--border-light);">
                     <div class="counter-number gold-text" style="font-size: 2.5rem; font-weight:700; line-height:1; min-width:120px;">2025</div>
-                    <div style="border-left: 1px solid var(--glass-border); padding-left: 40px;">
+                    <div style="border-left: 1px solid var(--border-light); padding-left: 40px;">
                         <h4 style="margin-bottom: 5px;">Automotive Sourcing Matrix Expansion</h4>
                         <p>Launch of 11Eleven Plus Auto Deals division. Transitioned structural asset focus towards elite brand-new/pre-owned global procurement and bespoke container handling networks.</p>
                     </div>
                 </div>
 
                 <!-- Milestone Card 3 -->
-                <div class="why-point-card glass-card reveal-on-scroll" style="display: flex; gap: 40px; align-items: center;">
+                <div class="why-point-card glass-card reveal-on-scroll" style="display: flex; gap: 40px; align-items: center; background: var(--white); border: 1px solid var(--border-light);">
                     <div class="counter-number gold-text" style="font-size: 2.5rem; font-weight:700; line-height:1; min-width:120px;">2026</div>
-                    <div style="border-left: 1px solid var(--glass-border); padding-left: 40px;">
+                    <div style="border-left: 1px solid var(--border-light); padding-left: 40px;">
                         <h4 style="margin-bottom: 5px;">Signature Haute Couture Integration</h4>
                         <p>Consolidation of the elite lifestyle loop with the birth of 11Eleven Plus Signature—introducing an exclusive, premium, gender-inclusive fashion house catering directly to modern executive wardrobes.</p>
                     </div>
@@ -222,7 +254,7 @@
                 <div class="footer-socials">
                     <a href="https://www.facebook.com/share/1C3CKjjL6a/?mibextid=wwXIfr" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/11eleven_plus" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@11eleven_plus" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.tiktok.com/@11elevenplus" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                     <a href="https://www.linkedin.com/in/eleven-plus-334429421" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://wa.me/+233274923917" target="_blank" class="frame-link"><i class="fa-brands fa-whatsapp"></i> </a>
                     <a href="mailto:11Elevenplusgroups@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>

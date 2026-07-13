@@ -8,7 +8,7 @@
     <!-- Google Fonts & FontAwesome Core Dependencies -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 
@@ -31,6 +31,7 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             color: var(--text-muted);
+            font-weight: var(--weight-semibold);
         }
         .form-control {
             background: rgba(255, 255, 255, 0.03);
@@ -42,6 +43,7 @@
             border-radius: 4px;
             outline: none;
             transition: border-color 0.4s var(--transition-premium);
+            font-weight: var(--weight-regular);
         }
         .form-control:focus {
             border-color: var(--gold);
@@ -73,16 +75,15 @@
             background-position: center;
             background-repeat: no-repeat;
             z-index: 0;
-            opacity: 0.35;
-            filter: brightness(0.8);
+            opacity: 0.06;
         }
         .why-image-wrapper {
             position: relative;
             margin: 35px 0;
             border-radius: 8px;
             overflow: hidden;
-            border: 1px solid var(--glass-border);
-            background: rgba(15,16,19,0.5);
+            border: 1px solid var(--border-light);
+            background: var(--white);
         }
         .why-image {
             width: 100%;
@@ -99,8 +100,43 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(180deg, rgba(7,7,8,0.3) 0%, rgba(7,7,8,0) 60%);
+            background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 60%);
             pointer-events: none;
+        }
+        /* Enhanced typography for contact page */
+        .category-hero .hero-content h1 {
+            font-weight: var(--weight-semibold);
+        }
+        .category-hero .hero-content p {
+            font-weight: var(--weight-regular);
+            font-size: var(--text-md);
+        }
+        .contact-grid-section .section-title {
+            font-weight: var(--weight-semibold);
+        }
+        .contact-grid-section .section-desc {
+            font-weight: var(--weight-regular);
+        }
+        .why-point-card h4 {
+            font-weight: var(--weight-semibold);
+        }
+        .why-point-card p {
+            font-weight: var(--weight-regular);
+        }
+        .why-point-card a {
+            font-weight: var(--weight-medium);
+        }
+        .glass-card h3 {
+            font-weight: var(--weight-semibold);
+        }
+        .form-group label {
+            font-weight: var(--weight-semibold);
+        }
+        .form-control {
+            font-weight: var(--weight-regular);
+        }
+        .btn-gold-filled {
+            font-weight: var(--weight-semibold);
         }
     </style>
 </head>
@@ -137,7 +173,7 @@
                 <div class="menu-socials">
                     <a href="https://www.facebook.com/share/1C3CKjjL6a/?mibextid=wwXIfr" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/11eleven_plus" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@11eleven_plus" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.tiktok.com/@11elevenplus" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                     <a href="https://www.linkedin.com/in/eleven-plus-334429421" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://wa.me/+233274923917" target="_blank" class="frame-link"><i class="fa-brands fa-whatsapp"></i> </a>
                 </div>
@@ -155,9 +191,9 @@
     </header>
 
     <!-- Inner Context Main Header with a luxury concierge background image -->
-    <section class="hero-section" style="height: 50vh; position: relative;">
-        <div class="hero-bg-image" style="background-image: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1600&q=80');" aria-hidden="true"></div>
-        <div class="hero-bg-overlay" style="background: radial-gradient(circle at center, transparent 15%, var(--bg-dark) 85%); z-index: 1;"></div>
+    <section class="hero-section category-hero" style="height: 50vh; position: relative; background: var(--gradient-hero);">
+        <div class="hero-bg-image" style="background-image: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1600&q=80');"></div>
+        <div class="hero-bg-overlay" style="background: radial-gradient(circle at center, transparent 15%, rgba(255,255,255,0.3) 85%); z-index: 1;"></div>
         <div class="hero-content" style="z-index: 2;">
             <span class="subtitle">The Concierge Desk</span>
             <h1 class="gradient-text">Initiate Connection</h1>
@@ -166,7 +202,7 @@
     </section>
 
     <!-- Unified Contact Area Layout Grid -->
-    <section class="contact-grid-section section-padding" style="padding-top: 40px;">
+    <section class="contact-grid-section section-padding" style="padding-top: 40px; background: var(--gradient-section);">
         <div class="container">
             
             <div class="why-grid">
@@ -187,7 +223,7 @@
 
                     <div class="why-points-side" style="margin-top: 40px;">
                         <!-- Telephone Node -->
-                        <div class="why-point-card glass-card" style="padding: 24px;">
+                        <div class="why-point-card glass-card" style="padding: 24px; background: var(--white); border: 1px solid var(--border-light);">
                             <i class="fa-solid fa-phone-volume gold-text"></i>
                             <div>
                                 <h4>Voice Communication Hub</h4>
@@ -196,7 +232,7 @@
                         </div>
 
                         <!-- Instant Chat WhatsApp Node -->
-                        <div class="why-point-card glass-card" style="padding: 24px;">
+                        <div class="why-point-card glass-card" style="padding: 24px; background: var(--white); border: 1px solid var(--border-light);">
                             <i class="fa-brands fa-whatsapp gold-text" style="color: #25D366;"></i>
                             <div>
                                 <h4>Concierge WhatsApp Matrix</h4>
@@ -205,7 +241,7 @@
                         </div>
 
                         <!-- Mail Communication Node -->
-                        <div class="why-point-card glass-card" style="padding: 24px;">
+                        <div class="why-point-card glass-card" style="padding: 24px; background: var(--white); border: 1px solid var(--border-light);">
                             <i class="fa-solid fa-envelope-open-text gold-text"></i>
                             <div>
                                 <h4>Secure Email Infrastructure</h4>
@@ -213,7 +249,7 @@
                             </div>
                         </div>
 
-                        <div class="why-point-card glass-card" style="padding: 24px;">
+                        <div class="why-point-card glass-card" style="padding: 24px; background: var(--white); border: 1px solid var(--border-light);">
                             <i class="fa-solid fa-map-marker-alt gold-text"></i>
                             <div>
                                 <h4>Showroom & Head Office</h4>
@@ -224,9 +260,9 @@
                 </div>
 
                 <!-- Input Interactive Form Platform -->
-                <div class="glass-card reveal-on-scroll" style="padding: 50px 40px;">
+                <div class="glass-card reveal-on-scroll" style="padding: 50px 40px; background: var(--white); border: 1px solid var(--border-light);">
                     <div class="card-glow-element"></div>
-                    <h3 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 30px; position:relative; z-index:1;">Acquisition Routing Form</h3>
+                    <h3 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 30px; position:relative; z-index:1; color: var(--rich-black); font-weight: var(--weight-semibold);">Acquisition Routing Form</h3>
                     
                     <form class="contact-form-wrapper"
                           style="position:relative; z-index:1;"
@@ -241,19 +277,19 @@
                         <div class="form-group">
                             <label for="client-name">Full Client Identity</label>
                             <input type="text" id="client-name" name="name" class="form-control"
-                                   placeholder="Enter your full name" required autocomplete="name">
+                                   placeholder="Enter your full name" required autocomplete="name" style="background: var(--soft-white); border: 1px solid var(--border-light); color: var(--rich-black); font-weight: var(--weight-regular);">
                         </div>
 
                         <div class="form-group">
                             <label for="client-email">Email Delivery Node</label>
                             <input type="email" id="client-email" name="email" class="form-control"
-                                   placeholder="client@domain.com" required autocomplete="email">
+                                   placeholder="client@domain.com" required autocomplete="email" style="background: var(--soft-white); border: 1px solid var(--border-light); color: var(--rich-black); font-weight: var(--weight-regular);">
                         </div>
                     
                         <div class="form-group">
                             <label for="division-select">Target Division Route</label>
                             <select id="division-select" name="select" class="form-control"
-                                    style="background-color: var(--bg-surface); color: var(--white);" required>
+                                    style="background-color: var(--soft-white); color: var(--rich-black); border: 1px solid var(--border-light); font-weight: var(--weight-regular);" required>
                                 <option value="" disabled selected>Select an executive service route</option>
                                 <option value="appliances">11Eleven Plus | Appliances & Electronics</option>
                                 <option value="auto">11Eleven Plus Auto Deals | Luxury Vehicles</option>
@@ -264,10 +300,10 @@
                         <div class="form-group">
                             <label for="client-message">Bespoke Project Description</label>
                             <textarea id="client-message" name="message" class="form-control" rows="5"
-                                      placeholder="Outline your tracking specifications or structural orders here..." required></textarea>
+                                      placeholder="Outline your tracking specifications or structural orders here..." required style="background: var(--soft-white); border: 1px solid var(--border-light); color: var(--rich-black); font-weight: var(--weight-regular);"></textarea>
                         </div>
                     
-                        <button type="submit" class="btn btn-gold-filled" id="submit-btn" style="width: 100%; margin-top: 10px;">
+                        <button type="submit" class="btn btn-gold-filled" id="submit-btn" style="width: 100%; margin-top: 10px; font-weight: var(--weight-semibold);">
                             <span class="btn-text">Transmit Sourcing Protocol</span>
                             <span class="btn-loader" style="display: none;"><i class="fa-solid fa-spinner fa-pulse"></i> Transmitting…</span>
                         </button>
@@ -276,8 +312,7 @@
             </div>
 
             <!-- Embedded Mapping Location Section Framework -->
-            <div class="map-placeholder reveal-on-scroll">
-                <!-- <i class="fa-solid fa-map-location-dot" style="font-size: 2rem; margin-right: 15px; color: var(--gold);"></i> -->
+            <div class="map-placeholder reveal-on-scroll" style="background: var(--white); border: 1px solid var(--border-light);">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.103445831986!2d-0.23960547814948066!3d5.551680143955403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf974309b71a43%3A0x7afa360ce217cfe6!2sLartebiokorshie%2C%20Accra!5e0!3m2!1sen!2sgh!4v1783713739751!5m2!1sen!2sgh" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
             </div>
 
@@ -293,7 +328,7 @@
                 <div class="footer-socials">
                     <a href="https://www.facebook.com/share/1C3CKjjL6a/?mibextid=wwXIfr" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/11eleven_plus" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@11eleven_plus" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.tiktok.com/@11elevenplus" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                     <a href="https://www.linkedin.com/in/eleven-plus-334429421" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://wa.me/+233274923917" target="_blank" class="frame-link"><i class="fa-brands fa-whatsapp"></i> </a>
                     <a href="mailto:11elevenplusgroups@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
