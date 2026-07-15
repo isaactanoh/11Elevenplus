@@ -1,6 +1,6 @@
 /**
  * 11Eleven Plus - Core UI & UX Interaction Engine
- * Bold & Vibrant Edition - Enhanced Performance
+ * Production Quality, Vanilla ECMAScript 6
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -15,8 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollProgress();
     initParallaxGlow();
     initMagneticButtons();
-    initFormEnhancements();
-    initSmoothScroll();
 });
 
 /* ==========================================================================
@@ -62,7 +60,7 @@ function initCustomCursor() {
         const diffX = targetX - currentX;
         const diffY = targetY - currentY;
 
-        // Interpolation factor for the trailing ring cursor
+        // Interpolation factor for the trailing ring cursor — higher = snappier, less lag
         const speed = 0.75;
         currentX += diffX * speed;
         currentY += diffY * speed;
@@ -75,18 +73,18 @@ function initCustomCursor() {
 
     renderCursorFrame();
 
-    const activeTargets = document.querySelectorAll('a, button, .glass-card, input, .btn, .nav-link, .card-btn, .footer-socials a');
+    const activeTargets = document.querySelectorAll('a, button, .glass-card, input, .btn');
     activeTargets.forEach(target => {
         target.addEventListener('mouseenter', () => {
             cursor.style.transform = 'translate(-50%, -50%) scale(1.6)';
-            cursor.style.backgroundColor = 'rgba(212, 175, 55, 0.08)';
-            cursor.style.borderColor = '#D4AF37';
+            cursor.style.backgroundColor = 'rgba(201, 168, 76, 0.08)';
+            cursor.style.borderColor = '#C9A84C';
             cursor.style.borderWidth = '2px';
         });
         target.addEventListener('mouseleave', () => {
             cursor.style.transform = 'translate(-50%, -50%) scale(1)';
             cursor.style.backgroundColor = 'transparent';
-            cursor.style.borderColor = '#D4AF37';
+            cursor.style.borderColor = '#C9A84C';
             cursor.style.borderWidth = '1.5px';
         });
     });
@@ -235,6 +233,9 @@ function initAnimatedMetrics() {
                 const steps = Math.min(explicitLimit, 60);
                 const calculationStepTime = Math.floor(sequenceDuration / steps);
 
+                // Store original suffix if any
+                const suffix = counterElement.nextElementSibling;
+
                 const incrementTimer = setInterval(() => {
                     currentProgressionValue += Math.ceil(explicitLimit / steps);
                     if (currentProgressionValue > explicitLimit) {
@@ -295,6 +296,7 @@ function initParallaxGlow() {
     function updateParallax() {
         const scrollTop = window.scrollY;
         spheres.forEach(sphere => {
+            // Gentle drift tied to scroll position, layered on top of the existing CSS float animation
             sphere.style.transform = `translateY(${scrollTop * 0.15}px)`;
         });
         ticking = false;
@@ -314,7 +316,7 @@ function initParallaxGlow() {
 function initMagneticButtons() {
     if (window.matchMedia('(max-width: 991px)').matches) return;
 
-    const magnets = document.querySelectorAll('.btn, .btn-nav, .card-btn');
+    const magnets = document.querySelectorAll('.btn, .btn-nav');
 
     magnets.forEach(el => {
         el.addEventListener('mousemove', (e) => {
@@ -329,226 +331,3 @@ function initMagneticButtons() {
         });
     });
 }
-
-/* ==========================================================================
-   10. FORM ENHANCEMENTS - BETTER USER EXPERIENCE
-   ========================================================================== */
-function initFormEnhancements() {
-    // Auto-dismiss loading state on form submission
-    const forms = document.querySelectorAll('form');
-    forms.forEach(form => {
-        form.addEventListener('submit', function(e) {
-            const submitBtn = this.querySelector('button[type="submit"]');
-            if (submitBtn) {
-                const btnText = submitBtn.querySelector('.btn-text');
-                const btnLoader = submitBtn.querySelector('.btn-loader');
-                if (btnText && btnLoader) {
-                    btnText.style.display = 'none';
-                    btnLoader.style.display = 'inline-block';
-                    submitBtn.disabled = true;
-                }
-            }
-        });
-    });
-
-    // Input focus effects
-    const inputs = document.querySelectorAll('.form-control');
-    inputs.forEach(input => {
-        input.addEventListener('focus', function() {
-            this.parentElement.classList.add('focused');
-        });
-        input.addEventListener('blur', function() {
-            this.parentElement.classList.remove('focused');
-        });
-    });
-
-    // Placeholder animation for empty inputs
-    const textInputs = document.querySelectorAll('input[type="text"], input[type="email"], textarea');
-    textInputs.forEach(input => {
-        input.addEventListener('input', function() {
-            if (this.value.length > 0) {
-                this.classList.add('has-value');
-            } else {
-                this.classList.remove('has-value');
-            }
-        });
-    });
-}
-
-/* ==========================================================================
-   11. SMOOTH SCROLL FOR ANCHOR LINKS
-   ========================================================================== */
-function initSmoothScroll() {
-    const anchorLinks = document.querySelectorAll('a[href^="#"]');
-    anchorLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                e.preventDefault();
-                const headerOffset = 100;
-                const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-}
-
-/* ==========================================================================
-   12. DYNAMIC YEAR UPDATE FOR FOOTER
-   ========================================================================== */
-(function updateFooterYear() {
-    const yearElements = document.querySelectorAll('.footer-bottom p');
-    const currentYear = new Date().getFullYear();
-    yearElements.forEach(el => {
-        el.textContent = el.textContent.replace('2026', currentYear);
-    });
-})();
-
-/* ==========================================================================
-   13. LAZY LOADING FOR IMAGES
-   ========================================================================== */
-(function initLazyLoading() {
-    if ('loading' in HTMLImageElement.prototype) {
-        const images = document.querySelectorAll('img[loading="lazy"]');
-        images.forEach(img => {
-            img.src = img.src;
-        });
-    } else {
-        // Fallback for older browsers
-        const script = document.createElement('script');
-        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
-        document.body.appendChild(script);
-    }
-})();
-
-/* ==========================================================================
-   14. KEYBOARD NAVIGATION ENHANCEMENTS
-   ========================================================================== */
-(function initKeyboardNav() {
-    const focusableElements = document.querySelectorAll('a, button, input, select, textarea');
-    focusableElements.forEach(el => {
-        el.addEventListener('focus', function() {
-            this.classList.add('keyboard-focus');
-        });
-        el.addEventListener('blur', function() {
-            this.classList.remove('keyboard-focus');
-        });
-    });
-})();
-
-/* ==========================================================================
-   15. PERFORMANCE OPTIMIZATION - DEBOUNCE RESIZE EVENTS
-   ========================================================================== */
-(function initResizeHandler() {
-    let resizeTimeout;
-    window.addEventListener('resize', () => {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(() => {
-            // Handle any resize-specific logic here
-            document.dispatchEvent(new CustomEvent('windowResized'));
-        }, 250);
-    });
-})();
-
-/* ==========================================================================
-   16. SCROLL TO TOP BUTTON (UTILITY)
-   ========================================================================== */
-(function initScrollToTop() {
-    // Create scroll to top button if it doesn't exist
-    if (!document.querySelector('.scroll-to-top')) {
-        const scrollBtn = document.createElement('button');
-        scrollBtn.className = 'scroll-to-top';
-        scrollBtn.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
-        scrollBtn.setAttribute('aria-label', 'Scroll to top');
-        scrollBtn.style.cssText = `
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--gradient-gold);
-            color: white;
-            border: none;
-            box-shadow: var(--shadow-gold-lg);
-            cursor: pointer;
-            z-index: 999;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all var(--transition-duration) var(--transition-premium);
-            font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        `;
-        document.body.appendChild(scrollBtn);
-
-        let ticking = false;
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                requestAnimationFrame(() => {
-                    if (window.scrollY > 500) {
-                        scrollBtn.style.opacity = '1';
-                        scrollBtn.style.transform = 'translateY(0)';
-                    } else {
-                        scrollBtn.style.opacity = '0';
-                        scrollBtn.style.transform = 'translateY(20px)';
-                    }
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        });
-
-        scrollBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // Hover effect
-        scrollBtn.addEventListener('mouseenter', () => {
-            scrollBtn.style.transform = 'scale(1.1)';
-        });
-        scrollBtn.addEventListener('mouseleave', () => {
-            if (window.scrollY > 500) {
-                scrollBtn.style.transform = 'scale(1)';
-            }
-        });
-    }
-})();
-
-/* ==========================================================================
-   17. CARD TILT EFFECT (DESKTOP ONLY)
-   ========================================================================== */
-(function initCardTilt() {
-    if (window.matchMedia('(max-width: 991px)').matches) return;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-    const cards = document.querySelectorAll('.glass-card:not(.no-tilt)');
-    cards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            const rotateX = (y - centerY) / centerY * -5;
-            const rotateY = (x - centerX) / centerX * 5;
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
-        });
-
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)';
-        });
-    });
-})();

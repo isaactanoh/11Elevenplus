@@ -95,8 +95,8 @@
     --transition-duration-slow: 0.7s;
 
     /* --- Glassmorphism --- */
-    --glass-bg: rgba(255, 255, 255, 0.92);
-    --glass-border: rgba(212, 175, 55, 0.20);
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(201, 168, 76, 0.12);
     --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
     --glass-blur: 20px;
 }
@@ -109,9 +109,9 @@
 }
 
 @media (min-width: 992px) {
-    * {
+    /* * {
         cursor: none;
-    }
+    } */
 }
 
 html {
@@ -123,7 +123,7 @@ body {
     background-color: var(--white);
     color: var(--rich-black);
     font-family: var(--font-body);
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.8;
     overflow-x: hidden;
     max-width: 100%;
@@ -189,7 +189,6 @@ ul {
 
 .gold-text {
     color: var(--gold);
-    font-weight: 700;
 }
 
 .gold-gradient-text {
@@ -205,37 +204,6 @@ ul {
 
 body.lock-scroll {
     overflow: hidden;
-}
-
-/* ========================================================================== */
-/* 02. PREMIUM CUSTOM CURSOR & INITIAL PRELOADER                            */
-/* ========================================================================== */
-.custom-cursor {
-    width: 40px;
-    height: 40px;
-    border: 2px solid var(--gold);
-    border-radius: 50%;
-    position: fixed;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    z-index: 9999;
-    transition: transform 0.2s ease, background-color 0.3s ease, border-color 0.3s ease;
-    will-change: transform, left, top;
-    backface-visibility: hidden;
-    background: rgba(212, 175, 55, 0.04);
-}
-
-.custom-cursor-dot {
-    width: 6px;
-    height: 6px;
-    background-color: var(--gold);
-    border-radius: 50%;
-    position: fixed;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    z-index: 10000;
-    will-change: transform, left, top;
-    backface-visibility: hidden;
 }
 
 .preloader {
@@ -258,10 +226,10 @@ body.lock-scroll {
 
 .preloader-logo {
     font-family: var(--font-heading);
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     letter-spacing: 6px;
     margin-bottom: 24px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--rich-black);
 }
 
@@ -271,12 +239,12 @@ body.lock-scroll {
 
 .preloader-bar {
     width: 180px;
-    height: 3px;
+    height: 2px;
     background-color: var(--silver-gray);
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-    border-radius: 4px;
+    border-radius: 2px;
 }
 
 .preloader-bar::after {
@@ -365,7 +333,7 @@ body.lock-scroll {
     font-size: var(--text-xs);
     text-transform: uppercase;
     letter-spacing: 2.5px;
-    font-weight: 600;
+    font-weight: 500;
     position: relative;
     padding: 8px 0;
     color: var(--medium-gray);
@@ -407,7 +375,7 @@ body.lock-scroll {
     font-size: var(--text-xs);
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-weight: 700;
+    font-weight: 600;
     background: transparent;
     border-radius: var(--radius-full);
     transition: all var(--transition-duration) var(--transition-premium);
@@ -534,7 +502,6 @@ body.lock-scroll {
         font-size: var(--text-lg);
         letter-spacing: 3px;
         color: var(--rich-black);
-        font-weight: 600;
     }
 
     .nav-link:hover {
@@ -638,14 +605,14 @@ body.lock-scroll {
     background-attachment: scroll;
     will-change: transform;
     animation: heroImageZoom 20s ease-out forwards;
-    opacity: 0.10;
+    opacity: 0.08;
 }
 
 @media (min-width: 992px) {
     .hero-bg-image {
         background-attachment: fixed;
         animation: none;
-        opacity: 0.12;
+        opacity: 0.10;
     }
 }
 
@@ -677,7 +644,7 @@ body.lock-scroll {
     right: -10%;
     width: 700px;
     height: 700px;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(201, 168, 76, 0.05) 0%, transparent 70%);
     filter: blur(100px);
     animation: drift 14s infinite alternate ease-in-out;
     z-index: 0;
@@ -705,7 +672,7 @@ body.lock-scroll {
     line-height: 1.1;
     letter-spacing: -1px;
     margin-bottom: 28px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--rich-black);
 }
 
@@ -714,7 +681,6 @@ body.lock-scroll {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-weight: 700;
 }
 
 .hero-content p {
@@ -722,7 +688,7 @@ body.lock-scroll {
     color: var(--dark-gray);
     max-width: 700px;
     margin: 0 auto 45px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.8;
 }
 
@@ -754,7 +720,7 @@ body.lock-scroll {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    /* gap: 3px; */
     opacity: 0.5;
     width: auto;
 }
@@ -770,11 +736,10 @@ body.lock-scroll {
 }
 
 .scroll-down-indicator span {
-    font-size: var(--text-xs);
+    font-size: var(--text-xs);        /* 0.7rem */
     text-transform: uppercase;
     letter-spacing: 4px;
     color: var(--medium-gray);
-    font-weight: 600;
 }
 
 .mouse-icon {
@@ -798,14 +763,8 @@ body.lock-scroll {
 }
 
 @keyframes scrollWheel {
-    0% {
-        top: 6px;
-        opacity: 1;
-    }
-    100% {
-        top: 18px;
-        opacity: 0;
-    }
+    0% { top: 6px; opacity: 1; }
+    100% { top: 18px; opacity: 0; }
 }
 
 /* ========================================================================== */
@@ -834,13 +793,13 @@ body.lock-scroll {
     color: var(--gold);
     display: block;
     margin-bottom: 16px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .section-title {
     font-family: var(--font-heading);
     font-size: clamp(2rem, 2.5vw + 1.2rem, 3.2rem);
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1.2;
     letter-spacing: -0.5px;
     color: var(--rich-black);
@@ -931,7 +890,7 @@ body.lock-scroll {
     left: var(--x, 0px);
     width: 350px;
     height: 350px;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(201, 168, 76, 0.08) 0%, transparent 70%);
     transform: translate(-50%, -50%);
     pointer-events: none;
     opacity: 0;
@@ -963,7 +922,7 @@ body.lock-scroll {
     margin-bottom: 16px;
     position: relative;
     z-index: 1;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: -0.5px;
     color: var(--rich-black);
 }
@@ -975,13 +934,12 @@ body.lock-scroll {
 }
 
 .glass-card p {
-    color: var(--dark-gray);
+    color: var(--medium-gray);
     font-size: var(--text-base);
     margin-bottom: 28px;
     position: relative;
     z-index: 1;
     line-height: 1.8;
-    font-weight: 500;
 }
 
 .card-features {
@@ -997,7 +955,7 @@ body.lock-scroll {
     align-items: center;
     gap: 14px;
     margin-bottom: 10px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .card-features i {
@@ -1010,7 +968,7 @@ body.lock-scroll {
     font-size: var(--text-xs);
     text-transform: uppercase;
     letter-spacing: 2.5px;
-    font-weight: 700;
+    font-weight: 600;
     display: inline-flex;
     align-items: center;
     gap: 12px;
@@ -1072,7 +1030,7 @@ body.lock-scroll {
     background-position: center 55%;
     background-repeat: no-repeat;
     z-index: 0;
-    opacity: 0.12;
+    opacity: 0.10;
 }
 
 @media (min-width: 992px) {
@@ -1111,7 +1069,7 @@ body.lock-scroll {
 .showcase-title {
     font-family: var(--font-heading);
     font-size: clamp(2.2rem, 3.5vw + 1.2rem, 3.8rem);
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1.2;
     margin-bottom: 20px;
     color: var(--rich-black);
@@ -1123,7 +1081,6 @@ body.lock-scroll {
     font-size: var(--text-md);
     margin-bottom: 34px;
     line-height: 1.7;
-    font-weight: 500;
 }
 
 @media (max-width: 576px) {
@@ -1152,8 +1109,8 @@ body.lock-scroll {
     pointer-events: none;
     opacity: 0.04;
     background-image:
-        radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.15) 0%, transparent 50%);
+        radial-gradient(circle at 20% 30%, rgba(201, 168, 76, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(201, 168, 76, 0.15) 0%, transparent 50%);
     background-size: 100% 100%;
 }
 
@@ -1178,7 +1135,6 @@ body.lock-scroll {
     margin-bottom: 40px;
     font-size: var(--text-md);
     line-height: 1.8;
-    font-weight: 500;
 }
 
 @media (max-width: 576px) {
@@ -1206,7 +1162,7 @@ body.lock-scroll {
 
 .counter-number {
     font-size: 3.6rem;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: -1px;
     color: var(--rich-black);
 }
@@ -1220,7 +1176,7 @@ body.lock-scroll {
 .counter-suffix {
     font-size: 2rem;
     color: var(--gold);
-    font-weight: 700;
+    font-weight: 400;
 }
 
 @media (max-width: 576px) {
@@ -1236,7 +1192,6 @@ body.lock-scroll {
     letter-spacing: 2px;
     color: var(--light-gray);
     margin-top: 6px;
-    font-weight: 600;
 }
 
 .why-points-side {
@@ -1287,7 +1242,7 @@ body.lock-scroll {
 .why-point-card h4 {
     font-size: var(--text-lg);
     margin-bottom: 6px;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 0.5px;
     color: var(--rich-black);
 }
@@ -1296,7 +1251,7 @@ body.lock-scroll {
     color: var(--medium-gray);
     font-size: var(--text-base);
     line-height: 1.7;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 /* ========================================================================== */
@@ -1339,13 +1294,13 @@ body.lock-scroll {
     font-style: italic;
     line-height: 1.6;
     margin-bottom: 32px;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--rich-black);
 }
 
 .client-meta h5 {
     font-size: var(--text-md);
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 1px;
     color: var(--rich-black);
 }
@@ -1355,7 +1310,6 @@ body.lock-scroll {
     color: var(--gold);
     text-transform: uppercase;
     letter-spacing: 2.5px;
-    font-weight: 600;
 }
 
 /* ========================================================================== */
@@ -1376,7 +1330,7 @@ body.lock-scroll {
     transform: translateX(-50%);
     width: 900px;
     height: 500px;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(201, 168, 76, 0.08) 0%, transparent 70%);
     filter: blur(60px);
 }
 
@@ -1385,7 +1339,7 @@ body.lock-scroll {
     font-size: clamp(2rem, 2.5vw + 1.2rem, 3.4rem);
     margin-bottom: 20px;
     line-height: 1.2;
-    font-weight: 700;
+    font-weight: 400;
     color: var(--rich-black);
 }
 
@@ -1394,7 +1348,6 @@ body.lock-scroll {
     max-width: 600px;
     margin: 0 auto 40px;
     font-size: var(--text-md);
-    font-weight: 500;
 }
 
 @media (max-width: 576px) {
@@ -1431,7 +1384,7 @@ body.lock-scroll {
     font-size: var(--text-xs);
     text-transform: uppercase;
     letter-spacing: 2.5px;
-    font-weight: 700;
+    font-weight: 600;
     border-radius: var(--radius-full);
     transition: all var(--transition-duration) var(--transition-premium);
     display: inline-block;
@@ -1596,7 +1549,6 @@ body.lock-scroll {
     margin-bottom: 30px;
     max-width: 340px;
     line-height: 1.8;
-    font-weight: 400;
 }
 
 .footer-socials {
@@ -1620,7 +1572,7 @@ body.lock-scroll {
 .footer-socials a:hover {
     border-color: var(--gold);
     color: var(--gold);
-    background: rgba(212, 175, 55, 0.08);
+    background: rgba(201, 168, 76, 0.08);
     transform: translateY(-3px);
 }
 
@@ -1630,7 +1582,7 @@ body.lock-scroll {
     text-transform: uppercase;
     letter-spacing: 2.5px;
     margin-bottom: 28px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--white);
 }
 
@@ -1644,7 +1596,6 @@ body.lock-scroll {
     font-size: var(--text-base);
     color: rgba(255, 255, 255, 0.5);
     transition: all var(--transition-duration-fast) var(--transition-premium);
-    font-weight: 500;
 }
 
 .footer-links-column a:hover {
@@ -1657,7 +1608,6 @@ body.lock-scroll {
     font-size: var(--text-base);
     margin-bottom: 24px;
     line-height: 1.7;
-    font-weight: 400;
 }
 
 .subscribe-form {
@@ -1680,7 +1630,6 @@ body.lock-scroll {
     font-size: var(--text-base);
     width: 100%;
     min-width: 0;
-    font-weight: 400;
 }
 
 .subscribe-form input::placeholder {
@@ -1752,7 +1701,7 @@ body.lock-scroll {
     position: fixed;
     top: 0;
     left: 0;
-    height: 3px;
+    height: 2px;
     width: 0%;
     background: var(--gradient-gold);
     z-index: 10002;
@@ -1783,14 +1732,6 @@ body.lock-scroll {
         animation: none !important;
     }
 
-    .custom-cursor,
-    .custom-cursor-dot {
-        display: none !important;
-    }
-    * {
-        cursor: auto !important;
-    }
-
     .btn::after,
     .btn-nav::after {
         display: none;
@@ -1801,13 +1742,6 @@ body.lock-scroll {
 /* 15. RESPONSIVE REFINEMENTS                                               */
 /* ========================================================================== */
 @media (max-width: 991px) {
-    * {
-        cursor: auto !important;
-    }
-    .custom-cursor,
-    .custom-cursor-dot {
-        display: none !important;
-    }
 
     .main-header {
         padding: 16px 0;
@@ -1901,6 +1835,7 @@ body.lock-scroll {
         width: 18px;
         height: 28px;
     }
+    
     .mouse-icon .wheel {
         height: 6px;
         top: 5px;
@@ -1983,7 +1918,6 @@ body.lock-scroll {
     line-height: 1.1;
     margin-bottom: 24px;
     color: var(--rich-black);
-    font-weight: 700;
 }
 
 .thank-you-content p {
@@ -1992,7 +1926,6 @@ body.lock-scroll {
     max-width: 600px;
     margin: 0 auto 40px;
     line-height: 1.8;
-    font-weight: 500;
 }
 
 /* ========================================================================== */
@@ -2033,7 +1966,7 @@ body.lock-scroll {
     letter-spacing: 2px;
     color: var(--medium-gray);
     margin-bottom: 8px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .contact-form-wrapper .form-control {
@@ -2048,7 +1981,6 @@ body.lock-scroll {
     transition: border-color var(--transition-duration-fast) var(--transition-premium),
                 box-shadow var(--transition-duration-fast) var(--transition-premium);
     outline: none;
-    font-weight: 500;
 }
 
 .contact-form-wrapper .form-control:focus {

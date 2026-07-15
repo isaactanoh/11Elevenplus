@@ -8,7 +8,7 @@
     <!-- Google Fonts & FontAwesome Core Dependencies -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 
@@ -31,7 +31,6 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             color: var(--text-muted);
-            font-weight: var(--weight-semibold);
         }
         .form-control {
             background: rgba(255, 255, 255, 0.03);
@@ -43,7 +42,6 @@
             border-radius: 4px;
             outline: none;
             transition: border-color 0.4s var(--transition-premium);
-            font-weight: var(--weight-regular);
         }
         .form-control:focus {
             border-color: var(--gold);
@@ -103,48 +101,9 @@
             background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 60%);
             pointer-events: none;
         }
-        /* Enhanced typography for contact page */
-        .category-hero .hero-content h1 {
-            font-weight: var(--weight-semibold);
-        }
-        .category-hero .hero-content p {
-            font-weight: var(--weight-regular);
-            font-size: var(--text-md);
-        }
-        .contact-grid-section .section-title {
-            font-weight: var(--weight-semibold);
-        }
-        .contact-grid-section .section-desc {
-            font-weight: var(--weight-regular);
-        }
-        .why-point-card h4 {
-            font-weight: var(--weight-semibold);
-        }
-        .why-point-card p {
-            font-weight: var(--weight-regular);
-        }
-        .why-point-card a {
-            font-weight: var(--weight-medium);
-        }
-        .glass-card h3 {
-            font-weight: var(--weight-semibold);
-        }
-        .form-group label {
-            font-weight: var(--weight-semibold);
-        }
-        .form-control {
-            font-weight: var(--weight-regular);
-        }
-        .btn-gold-filled {
-            font-weight: var(--weight-semibold);
-        }
     </style>
 </head>
 <body>
-
-    <!-- Custom Luxury Cursor Elements -->
-    <div class="custom-cursor"></div>
-    <div class="custom-cursor-dot"></div>
 
     <!-- Active Loader Engine -->
     <div class="preloader">
@@ -262,7 +221,7 @@
                 <!-- Input Interactive Form Platform -->
                 <div class="glass-card reveal-on-scroll" style="padding: 50px 40px; background: var(--white); border: 1px solid var(--border-light);">
                     <div class="card-glow-element"></div>
-                    <h3 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 30px; position:relative; z-index:1; color: var(--rich-black); font-weight: var(--weight-semibold);">Acquisition Routing Form</h3>
+                    <h3 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 30px; position:relative; z-index:1; color: var(--rich-black);">Acquisition Routing Form</h3>
                     
                     <form class="contact-form-wrapper"
                           style="position:relative; z-index:1;"
@@ -277,19 +236,19 @@
                         <div class="form-group">
                             <label for="client-name">Full Client Identity</label>
                             <input type="text" id="client-name" name="name" class="form-control"
-                                   placeholder="Enter your full name" required autocomplete="name" style="background: var(--soft-white); border: 1px solid var(--border-light); color: var(--rich-black); font-weight: var(--weight-regular);">
+                                   placeholder="Enter your full name" required autocomplete="name" style="background: var(--soft-white); border: 1px solid var(--border-light); color: var(--rich-black);">
                         </div>
 
                         <div class="form-group">
                             <label for="client-email">Email Delivery Node</label>
                             <input type="email" id="client-email" name="email" class="form-control"
-                                   placeholder="client@domain.com" required autocomplete="email" style="background: var(--soft-white); border: 1px solid var(--border-light); color: var(--rich-black); font-weight: var(--weight-regular);">
+                                   placeholder="client@domain.com" required autocomplete="email" style="background: var(--soft-white); border: 1px solid var(--border-light); color: var(--rich-black);">
                         </div>
                     
                         <div class="form-group">
                             <label for="division-select">Target Division Route</label>
                             <select id="division-select" name="select" class="form-control"
-                                    style="background-color: var(--soft-white); color: var(--rich-black); border: 1px solid var(--border-light); font-weight: var(--weight-regular);" required>
+                                    style="background-color: var(--soft-white); color: var(--rich-black); border: 1px solid var(--border-light);" required>
                                 <option value="" disabled selected>Select an executive service route</option>
                                 <option value="appliances">11Eleven Plus | Appliances & Electronics</option>
                                 <option value="auto">11Eleven Plus Auto Deals | Luxury Vehicles</option>
@@ -300,10 +259,10 @@
                         <div class="form-group">
                             <label for="client-message">Bespoke Project Description</label>
                             <textarea id="client-message" name="message" class="form-control" rows="5"
-                                      placeholder="Outline your tracking specifications or structural orders here..." required style="background: var(--soft-white); border: 1px solid var(--border-light); color: var(--rich-black); font-weight: var(--weight-regular);"></textarea>
+                                      placeholder="Outline your tracking specifications or structural orders here..." required style="background: var(--soft-white); border: 1px solid var(--border-light); color: var(--rich-black);"></textarea>
                         </div>
                     
-                        <button type="submit" class="btn btn-gold-filled" id="submit-btn" style="width: 100%; margin-top: 10px; font-weight: var(--weight-semibold);">
+                        <button type="submit" class="btn btn-gold-filled" id="submit-btn" style="width: 100%; margin-top: 10px;">
                             <span class="btn-text">Transmit Sourcing Protocol</span>
                             <span class="btn-loader" style="display: none;"><i class="fa-solid fa-spinner fa-pulse"></i> Transmitting…</span>
                         </button>
